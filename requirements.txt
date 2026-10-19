@@ -1,0 +1,5 @@
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+# Opcional: só é necessário para AliExpress e Shopee (sites que exigem navegador real).
+# Depois de instalar: python -m playwright install chromium
+playwright>=1.44.0
