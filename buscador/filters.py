@@ -44,7 +44,7 @@ def filter_offers(
     *,
     min_relevance: float = 0.4,
     include_accessories: bool = False,
-    include_used: bool = False,
+    include_used: bool = True,
     price_min: Optional[float] = None,
     price_max: Optional[float] = None,
     drop_outliers: bool = True,
