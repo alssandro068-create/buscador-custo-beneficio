@@ -15,7 +15,7 @@ st.set_page_config(page_title="Buscador de Custo-Benefício", page_icon="🛒", 
 st.title("🛒 Buscador de Custo-Benefício")
 st.write("Encontre as melhores ofertas em todas as lojas online disponíveis.")
 
-query = st.text_input("Qual produto deseja pesquisar?", placeholder="Ex: RX 580")
+query = st.text_input("Qual produto deseja pesquisar?", placeholder="Ex: rx 580")
 
 # Lista de todas as lojas suportadas pelo motor de busca
 TODAS_AS_LOJAS = ["mercadolivre", "amazon", "magalu", "shopee", "aliexpress"]
@@ -36,7 +36,9 @@ if st.button("Buscar Ofertas") and query:
                 opts = SearchOptions(
                     lojas=lojas_selecionadas,
                     top=15,
-                    enriquecer=True
+                    enriquecer=True,
+                    incluir_usados=True,
+                    incluir_acessorios=True
                 )
                 offers, stats = run_search(query, opts)
 
