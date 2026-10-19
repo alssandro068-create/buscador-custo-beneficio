@@ -42,7 +42,7 @@ def filter_offers(
     offers: List[Offer],
     query: str,
     *,
-    min_relevance: float = 0.8,
+    min_relevance: float = 0.4,
     include_accessories: bool = False,
     include_used: bool = False,
     price_min: Optional[float] = None,
